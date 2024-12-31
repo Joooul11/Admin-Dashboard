@@ -7,9 +7,14 @@
 }
 
 .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "search search small-user"
+        "user-main user-main menu";
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
     padding: 1rem 2rem;
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -87,21 +92,33 @@
 .menu {
     display: flex;
     gap: 1rem;
-    grid-column: 2;  /* Place in second column */
-    grid-row: 2;  /* Place in second row */
+    align-items: center;
+    grid-area: menu;
+    justify-self: end;
+    align-self: end;
 }
 
 .menu button {
-    background-color: blue;
+    background-color: #1992d4;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 20px;
+    padding: 0.8rem 2rem;
+    min-width: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
     cursor: pointer;
-    text-align: left;
+    transition: all 0.2s ease;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu button:hover {
-    background-color: darkblue;
+    background-color: #0d6efd;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .main {
@@ -193,6 +210,7 @@
 }
 
 .search-container {
+    grid-area: search;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -200,7 +218,7 @@
     border-radius: 20px;
     padding: 0.5rem 1rem;
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;  /* Increased max-width for 2 column span */
 }
 
 .search-container input[type="search"] {
@@ -212,4 +230,30 @@
 .search-container .material-icons {
     color: #666;
     font-size: 20px;
+}
+
+.small-user {
+    grid-area: small-user;
+    justify-self: end;
+}
+
+.small-user p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.small-user .material-icons {
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.user-main {
+    grid-area: user-main;
+}
+
+.user-main .material-icons {
+    vertical-align: middle;
+    margin-right: 10px;
 }
