@@ -1,3 +1,14 @@
+/* Color Variables */
+:root {
+    --primary-color: #1992d4;
+    --secondary-color: #f0f9ff;
+    --accent-color: #ffd700;
+    --text-dark: #2c3e50;
+    --text-light: #ffffff;
+    --background-light: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
 /* Main container grid layout */
 .container {
     display: grid;
@@ -15,9 +26,9 @@
         "user-main user-main menu";
     align-items: center;
     gap: 20px;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 2rem;  /* Increased padding */
+    background-color: var(--background-light);
+    box-shadow: 0 4px 8px var(--shadow-color);  /* Enhanced shadow */
     grid-column: 2;  /* Place in second column */
     grid-row: 1;  /* Place in first row */
 }
@@ -49,9 +60,9 @@
 .dashboard {
     grid-column: 1;  /* Place in first column */
     grid-row: 1 / -1;  /* Span all rows from first to last */
-    background-color: blue;
-    color: white;
-    padding: 20px;
+    background-color: var(--primary-color);  /* Changed from blue to a specific shade */
+    color: var(--text-light);
+    padding: 30px;  /* Increased padding */
 }
 
 .dashboard-nav {
@@ -65,7 +76,8 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;  /* Increased gap */
+    font-size: 1.1rem;  /* Larger text */
 }
 
 .nav-list a {
@@ -99,8 +111,8 @@
 }
 
 .menu button {
-    background-color: #1992d4;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     border: none;
     border-radius: 20px;
     padding: 0.8rem 2rem;
@@ -127,13 +139,29 @@
     padding: 20px;
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.header-row {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.main h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .articles {
     grid-column: 1;
-    grid-row: 1/4;
-    background-color: lightblue;
+    grid-row: 2/4;
+    background-color: var(--secondary-color);
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
@@ -149,10 +177,10 @@
 }
 
 .articles .card {
-    background-color: white;
+    background-color: var(--background-light);
     padding: 15px;
     border-radius: 8px;
-    border-left: 8px solid #ffd700;
+    border-left: 8px solid var(--accent-color);
     display: flex;
     flex-direction: column;
     min-height: 200px; /* Ensure consistent card height */
@@ -183,15 +211,61 @@
 .trending {
     grid-column: 2;
     grid-row: 3;
-    background-color: lightblue;
+    background-color: var(--background-light);
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.trending-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    transition: background-color 0.2s;
+}
+
+.trending-card:hover {
+    background-color: #f8fafc;
+}
+
+.trending-card .avatar {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+.user-info .handle {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.user-info .project {
+    color: #666;
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
 }
 
 .announcements{
     grid-column: 2;
-    grid-row: 1;
-    background-color: lightblue;
+    grid-row: 2;
+    background-color: var(--background-light);
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.announcements .card {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.announcements .card:last-child {
+    border-bottom: none;
+}
+
+.announcements h2 {
+    margin-bottom: 15px;
 }
 
 .material-icons {
@@ -213,12 +287,12 @@
     grid-area: search;
     display: flex;
     align-items: center;
-    gap: 10px;
-    background-color: #e2e8f0;
-    border-radius: 20px;
-    padding: 0.5rem 1rem;
+    gap: 15px;  /* Increased gap */
+    background-color: var(--secondary-color);  /* Lighter background */
+    border-radius: 25px;  /* Increased radius */
+    padding: 0.8rem 1.5rem;  /* Increased padding */
     width: 100%;
-    max-width: 600px;  /* Increased max-width for 2 column span */
+    max-width: 700px;  /* Increased width */
 }
 
 .search-container input[type="search"] {
@@ -228,8 +302,8 @@
 }
 
 .search-container .material-icons {
-    color: #666;
-    font-size: 20px;
+    color: #444;  /* Darker icon color */
+    font-size: 24px;  /* Larger icon */
 }
 
 .small-user {
@@ -242,11 +316,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 1.1rem;  /* Larger text */
+    font-weight: 500;  /* Semi-bold */
+    color: #333;  /* Darker text */
 }
 
 .small-user .material-icons {
-    font-size: 24px;
-    vertical-align: middle;
+    font-size: 32px;  /* Larger icon */
+    color: #1992d4;  /* Accent color */
 }
 
 .user-main {
@@ -256,4 +333,24 @@
 .user-main .material-icons {
     vertical-align: middle;
     margin-right: 10px;
+}
+
+.user-main h3 {
+    font-size: 1.4rem;  /* Larger heading */
+    color: #2c3e50;  /* Rich dark color */
+    line-height: 1.4;  /* Better line height */
+}
+
+/* Add styles for title containers */
+.title-announcment, .title {
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.title-announcment h2, .title h2 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin: 0;  /* Remove default margin */
+    line-height: 1.2;  /* Consistent line height */
 }
