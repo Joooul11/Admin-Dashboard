@@ -65,6 +65,22 @@
     padding: 30px;  /* Increased padding */
 }
 
+.dashboard h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.dashboard h3 .material-icons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .dashboard-nav {
     display: flex;
     flex-direction: column;
@@ -76,28 +92,36 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;  /* Increased gap */
-    font-size: 1.1rem;  /* Larger text */
+    gap: 20px;
 }
 
 .nav-list a {
     display: flex;
     align-items: center;
     gap: 15px;
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .nav-list a:hover {
     background-color: rgba(255,255,255,0.1);
-    border-radius: 5px;
 }
 
 .nav-list img {
     width: 20px;
     height: 20px;
     filter: brightness(0) invert(1);
+}
+
+.nav-list .material-icons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Menu section styles */
@@ -170,9 +194,9 @@
 }
 
 .title {
-    grid-column: 1 / -1; /* Spans across all columns */
+    grid-column: 1 / -1;
     grid-row: 1;
-    background-color: lightblue;
+    background: none;
     padding: 20px;
 }
 
@@ -184,6 +208,13 @@
     display: flex;
     flex-direction: column;
     min-height: 200px; /* Ensure consistent card height */
+}
+
+.articles .title h2 {
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 .card .content {
