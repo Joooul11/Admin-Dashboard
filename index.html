@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <!-- Add Material Icons CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -22,20 +24,23 @@
         </div>
         <!-- Add dashboard section here -->
         <div class="dashboard">
-            <h3><img src="dashboard-icon.png" alt="Dashboard"> Dashboard</h3>
-            <div class="small list">
-                <button onclick="location.href='home.html'"><img src="home-icon.png" alt="Home" style="width:20px; height:20px;"> Home</button>
-                <button onclick="location.href='profile.html'"><img src="profile-icon.png" alt="Profile" style="width:20px; height:20px;"> Profile</button>
-                <button onclick="location.href='messages.html'"><img src="messages-icon.png" alt="Messages" style="width:20px; height:20px;"> Messages</button>
-                <button onclick="location.href='history.html'"><img src="history-icon.png" alt="History" style="width:20px; height:20px;"> History</button>
-                <button onclick="location.href='tasks.html'"><img src="tasks-icon.png" alt="Tasks" style="width:20px; height:20px;"> Tasks</button>
-                <button onclick="location.href='communities.html'"><img src="communities-icon.png" alt="Communities" style="width:20px; height:20px;"> Communities</button>
-            </div>
-            <div class="small list">
-                <button onclick="location.href='settings.html'"><img src="settings-icon.png" alt="Settings" style="width:20px; height:20px;"> Settings</button>
-                <button onclick="location.href='support.html'"><img src="support-icon.png" alt="Support" style="width:20px; height:20px;"> Support</button>
-                <button onclick="location.href='privacy.html'"><img src="privacy-icon.png" alt="Privacy" style="width:20px; height:20px;"> Privacy</button>
-            </div>
+            <h3><span class="material-icons">dashboard</span> Dashboard</h3>
+            <nav class="dashboard-nav">
+                <ul class="nav-list">
+                    <li><a href="home.html"><span class="material-icons">home</span> Home</a></li>
+                    <li><a href="profile.html"><span class="material-icons">person</span> Profile</a></li>
+                    <li><a href="messages.html"><span class="material-icons">message</span> Messages</a></li>
+                    <li><a href="history.html"><span class="material-icons">history</span> History</a></li>
+                    <li><a href="tasks.html"><span class="material-icons">task</span> Tasks</a></li>
+                    <li><a href="communities.html"><span class="material-icons">groups</span> Communities</a></li>
+                </ul>
+                
+                <ul class="nav-list">
+                    <li><a href="settings.html"><span class="material-icons">settings</span> Settings</a></li>
+                    <li><a href="support.html"><span class="material-icons">help</span> Support</a></li>
+                    <li><a href="privacy.html"><span class="material-icons">shield</span> Privacy</a></li>
+                </ul>
+            </nav>
         </div>
         <!-- Add announcements section here -->
         <div class="main">
@@ -64,54 +69,54 @@
                     <h3>Article 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis beatae alias recusandae nulla? Est porro assumenda nobis expedita deserunt earum recusandae nisi praesentium natus, aspernatur fugit, qui nesciunt, repellendus molestias!</p>
                     <div class="icons">
-                        <img src="star-icon.png" alt="Star" style="width:20px; height:20px;">
-                        <img src="eye-icon.png" alt="View" style="width:20px; height:20px;">
-                        <img src="share-icon.png" alt="Share" style="width:20px; height:20px;">
+                        <span class="material-icons">star_outline</span>
+                        <span class="material-icons">visibility</span>
+                        <span class="material-icons">share</span>
                     </div>
                 </div> 
                 <div class="card">
                     <h3>Article 2</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit hic quaerat sequi delectus impedit quidem iusto, illum dignissimos consequuntur explicabo ratione quo odit nulla mollitia pariatur! Culpa alias architecto molestias.</p>
                     <div class="icons">
-                        <img src="star-icon.png" alt="Star" style="width:20px; height:20px;">
-                        <img src="eye-icon.png" alt="View" style="width:20px; height:20px;">
-                        <img src="share-icon.png" alt="Share" style="width:20px; height:20px;">
+                        <span class="material-icons">star_outline</span>
+                        <span class="material-icons">visibility</span>
+                        <span class="material-icons">share</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Article 3</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, voluptatibus harum officia a sequi accusamus explicabo distinctio, numquam neque eius architecto. Quaerat distinctio a sed qui itaque laudantium veniam necessitatibus.</p>
                     <div class="icons">
-                        <img src="star-icon.png" alt="Star" style="width:20px; height:20px;">
-                        <img src="eye-icon.png" alt="View" style="width:20px; height:20px;">
-                        <img src="share-icon.png" alt="Share" style="width:20px; height:20px;">
+                        <span class="material-icons">star_outline</span>
+                        <span class="material-icons">visibility</span>
+                        <span class="material-icons">share</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Article 4</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dolorem itaque repellat sit doloribus fugit culpa nemo, illo architecto temporibus sunt repudiandae. Adipisci sint eligendi libero tempora, est ullam! Dolor.</p>
                     <div class="icons">
-                        <img src="star-icon.png" alt="Star" style="width:20px; height:20px;">
-                        <img src="eye-icon.png" alt="View" style="width:20px; height:20px;">
-                        <img src="share-icon.png" alt="Share" style="width:20px; height:20px;">
+                        <span class="material-icons">star_outline</span>
+                        <span class="material-icons">visibility</span>
+                        <span class="material-icons">share</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Article 5</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta dolore quaerat non quo incidunt blanditiis quisquam, ad, adipisci optio dignissimos dolorum aut? Animi ipsam aperiam magnam repellat quod cum?</p>
                     <div class="icons">
-                        <img src="star-icon.png" alt="Star" style="width:20px; height:20px;">
-                        <img src="eye-icon.png" alt="View" style="width:20px; height:20px;">
-                        <img src="share-icon.png" alt="Share" style="width:20px; height:20px;">
+                        <span class="material-icons">star_outline</span>
+                        <span class="material-icons">visibility</span>
+                        <span class="material-icons">share</span>
                     </div>
                 </div>
                 <div class="card">
                     <h3>Article 6</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo officiis enim provident laudantium sint. Quam perspiciatis quisquam mollitia ratione delectus maxime vel fuga exercitationem! Saepe error dolores eligendi maxime nulla.</p>
                     <div class="icons">
-                        <img src="star-icon.png" alt="Star" style="width:20px; height:20px;">
-                        <img src="eye-icon.png" alt="View" style="width:20px; height:20px;">
-                        <img src="share-icon.png" alt="Share" style="width:20px; height:20px;">
+                        <span class="material-icons">star_outline</span>
+                        <span class="material-icons">visibility</span>
+                        <span class="material-icons">share</span>
                     </div>
                 </div>
             </div>
